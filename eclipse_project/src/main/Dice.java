@@ -1,6 +1,6 @@
 package main;
 
-public class dice {
+public class Dice {
 
 	public int rolled;
 	public int rolled_dice1;
