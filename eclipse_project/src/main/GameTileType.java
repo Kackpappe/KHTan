@@ -1,5 +1,5 @@
 package main;
 
 public enum GameTileType {
-	Siedlung, Straße, Stadt, Raeuber
+	Siedlung, Straße, Stadt, Raeuber, Test
 }
