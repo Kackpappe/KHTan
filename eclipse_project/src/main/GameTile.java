@@ -1,7 +1,27 @@
 package main;
 
 public class GameTile {
-	private enum type { Siedlung, Straße, Stadt, Räuber }
-	private enum color { Rot, Grün, Orange, Blau, Schwarz }
+	private main.GameTileType type;
+	private main.Color color;
 	private int winpoints;
+	
+	
+	public int getWinpoints() {
+		return winpoints;
+	}
+	public void setWinpoints(int winpoints) {
+		this.winpoints = winpoints;
+	}
+	public main.Color getColor() {
+		return color;
+	}
+	public void setColor(main.Color color) {
+		this.color = color;
+	}
+	public main.GameTileType getType() {
+		return type;
+	}
+	public void setType(main.GameTileType type) {
+		this.type = type;
+	}
 }
