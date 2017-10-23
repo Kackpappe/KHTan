@@ -1,5 +1,5 @@
 package main;
 
 public enum Color {
-	Rot, Organe, Blau, Schwarz, Weiﬂ
+	Rot, Organe, Blau, Schwarz, Weiss
 }
