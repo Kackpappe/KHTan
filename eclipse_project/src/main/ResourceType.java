@@ -1,5 +1,5 @@
 package main;
 
 public enum ResourceType {
-	wolle, lehm, holz, getreide, erz
+	Wolle, Lehm, Holz, Getreide, Erz
 }
