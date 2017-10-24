@@ -6,8 +6,8 @@ public class Player {
 		private String Name;
 		private main.Color Color;
 		private int Winpooints;
-		private ArrayList<ResourceCard> ResourceCardList;
-		private ArrayList<DevelopmentCard> DevCardList;
+		private ArrayList<ResourceCard> ResourceCardList = new ArrayList<ResourceCard>();
+		private ArrayList<DevelopmentCard> DevCardList = new ArrayList<DevelopmentCard>();
 		private main.SpecialCardType KnightlyPower;
 		private main.SpecialCardType TradingPower;
 		//private main.   Bustatus
@@ -22,6 +22,9 @@ public class Player {
 
 		public String getName() {
 			return Name;
+		}
+		public ArrayList<ResourceCard> getResourceCard() {
+			return ResourceCardList;
 		}
 
 		public void setName(String name) {
