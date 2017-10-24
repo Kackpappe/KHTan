@@ -3,5 +3,10 @@ package main;
 public class SpecialCard {
 	private main.SpecialCardType type;
 	private int winpoints;
-	private char condition; // Typ noch ändern, je nachdem wie condition abgelegt wird
+	private char condition; // Typ noch ï¿½ndern, je nachdem wie condition abgelegt wird
+	
+	public SpecialCardType getType() {
+		return type;
+	}
+	
 }

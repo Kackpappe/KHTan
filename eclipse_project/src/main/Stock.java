@@ -12,6 +12,7 @@ public class Stock {
 	private ArrayList<ResourceCard> grain;
 	private ArrayList<ResourceCard> ore;
 	private ArrayList<DevelopmentCard> developmentCards;
+	private ArrayList<SpecialCard> specialCards;
 	
 	public Stock() {
 		wood = new ArrayList<ResourceCard>();
@@ -20,6 +21,19 @@ public class Stock {
 		grain = new ArrayList<ResourceCard>();
 		ore = new ArrayList<ResourceCard>();
 		developmentCards = new ArrayList<DevelopmentCard>();
+		specialCards = new ArrayList<SpecialCard>();
+	}
+	
+	
+	public void addSpecialCard(SpecialCard card) {
+		specialCards.add(card);
+	}
+	
+	
+	public void addSpecialCards(ArrayList<SpecialCard> cards) {
+		for (SpecialCard card : cards) {
+			addSpecialCard(card);
+		}
 	}
 	
 	
@@ -48,6 +62,17 @@ public class Stock {
 	
 	public void addDevelopmentCards(ArrayList<DevelopmentCard> developmentCards) {
 		this.developmentCards.addAll(developmentCards);
+	}
+	
+	
+	public SpecialCard getSpecialCard(SpecialCardType type) {
+		for (SpecialCard card : specialCards) {
+			if (card.getType().equals(type)) {
+				return card;
+			}
+		}
+		
+		return null;
 	}
 	
 	

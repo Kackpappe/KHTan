@@ -16,9 +16,12 @@ public class Bank {
 	}
 	
 	
-	public void fillStock(ArrayList<ResourceCard> resources, ArrayList<DevelopmentCard> developmentCards) {
+	public void fillStock(ArrayList<ResourceCard> resources,
+						  ArrayList<DevelopmentCard> developmentCards,
+						  ArrayList<SpecialCard> specialCards) {
 		stock.addDevelopmentCards(developmentCards);
 		stock.addResourceCards(resources);
+		stock.addSpecialCards(specialCards);
 	}
 	
 	
@@ -80,6 +83,24 @@ public class Bank {
 		
 		receiveResourceCards(player, resources);
 		player.AddDevCard(card);
+	}
+	
+	
+	public void giveSpecialCard(Player player, SpecialCardType type) {
+		SpecialCard card = stock.getSpecialCard(type);
+		
+		if (card != null) {
+			// TODO
+		}
+	}
+	
+	
+	public void receiveSpecialCard(Player player, SpecialCardType type) {
+		SpecialCard card = null;		// TODO player.getSpecialCard(type);
+		
+		if (card != null) {
+			stock.addSpecialCard(card);
+		}
 	}
 	
 	
