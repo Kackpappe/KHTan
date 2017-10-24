@@ -8,8 +8,8 @@ public class Player {
 		private int Winpooints;
 		private ArrayList<ResourceCard> ResourceCardList = new ArrayList<ResourceCard>();
 		private ArrayList<DevelopmentCard> DevCardList = new ArrayList<DevelopmentCard>();
-		private main.SpecialCardType KnightlyPower;
-		private main.SpecialCardType TradingPower;
+		private SpecialCardType KnightlyPower;
+		private SpecialCardType TradingPower;
 		//private main.   Bustatus
 
 		public void AddResourceCard(ResourceCard card) {
