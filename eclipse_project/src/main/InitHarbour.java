@@ -12,7 +12,7 @@ public class InitHarbour {
 		ResourceType givenResource = ResourceType.Holz; //Typ wird aus Tabelle gelesen
 		hafen.setGivenResource(givenResource);
 		
-		//Anschließend ins Spielfeld übertragen
+		//TODO Anschließend ins Spielfeld übertragen
 	}
 	
 	
