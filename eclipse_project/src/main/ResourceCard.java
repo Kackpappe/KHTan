@@ -4,7 +4,7 @@ public class ResourceCard {
 	
 	private ResourceType type;
 	
-	private ResourceCard(ResourceType type) {
+	public ResourceCard(ResourceType type) {
 		this.type = type;
 	}
 	

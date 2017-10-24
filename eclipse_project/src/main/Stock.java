@@ -9,6 +9,7 @@ public class Stock {
 	private ArrayList<ResourceCard> clay;
 	private ArrayList<ResourceCard> grain;
 	private ArrayList<ResourceCard> ore;
+	private ArrayList<DevelopmentCard> developmentCards;
 	
 	public Stock() {
 		wood = new ArrayList<ResourceCard>();
@@ -16,6 +17,7 @@ public class Stock {
 		clay = new ArrayList<ResourceCard>();
 		grain = new ArrayList<ResourceCard>();
 		ore = new ArrayList<ResourceCard>();
+		developmentCards = new ArrayList<DevelopmentCard>();
 	}
 	
 	
@@ -42,6 +44,11 @@ public class Stock {
 	}
 	
 	
+	public void addDevelopmentCards(ArrayList<DevelopmentCard> developmentCards) {
+		this.developmentCards.addAll(developmentCards);
+	}
+	
+	
 	public ResourceCard getResourceCard(ResourceType type) throws NoMoreCardInStockException {
 		ArrayList<ResourceCard> cards = null;
 		
@@ -56,6 +63,17 @@ public class Stock {
 		
 		checkStock(cards);
 		return pullResourceCard(cards);
+	}
+	
+	
+	public DevelopmentCard getDevelopmentCard() throws NoMoreCardInStockException {
+		if (developmentCards.size() == 0) {
+			throw new NoMoreCardInStockException();
+		}
+		
+		DevelopmentCard card = developmentCards.get(0);
+		developmentCards.remove(0);
+		return card;
 	}
 	
 	
