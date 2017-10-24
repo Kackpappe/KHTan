@@ -11,6 +11,8 @@ public class InitHarbour {
 		hafen.setNehmen(1);
 		ResourceType givenResource = ResourceType.Holz; //Typ wird aus Tabelle gelesen
 		hafen.setGivenResource(givenResource);
+		
+		//Anschließend ins Spielfeld übertragen
 	}
 	
 	
