@@ -1,4 +1,4 @@
-package main;
+package exceptions;
 
 public class NotEnoughResourcesException extends Exception {
 

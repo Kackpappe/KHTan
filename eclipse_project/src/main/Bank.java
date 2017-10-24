@@ -3,6 +3,9 @@ package main;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import exceptions.NoMoreCardInStockException;
+import exceptions.NotEnoughResourcesException;
+
 public class Bank {
 	
 	private Stock stock;
@@ -56,45 +59,27 @@ public class Bank {
 				cards.add(card);
 			}
 		}
+		
+		stock.addResourceCards(cards);
 	}
 	
 	
 	public void giveDevelopmentCard(Player player) throws NotEnoughResourcesException {
-		ArrayList<ResourceCard> cards = new ArrayList<ResourceCard>();
-		
-		ResourceCard grain = player.gatherResourceCard(ResourceType.Getreide);
-		
-		if (grain == null) {
-			addResourceCardsToPlayer(player, cards);
-			throw new NotEnoughResourcesException();
-		} else {
-			cards.add(grain);
-		}
-		
-		ResourceCard wool = player.gatherResourceCard(ResourceType.Wolle);
-		
-		if (wool == null) {
-			addResourceCardsToPlayer(player, cards);
-			throw new NotEnoughResourcesException();
-		} else {
-			cards.add(wool);
-		}
-		
-		ResourceCard ore = player.gatherResourceCard(ResourceType.Erz);
-		
-		if (ore == null) {
-			addResourceCardsToPlayer(player, cards);
-			throw new NotEnoughResourcesException();
-		} else {
-			cards.add(ore);
-		}
+		DevelopmentCard card = null;
 		
 		try {
-			player.AddDevCard(stock.getDevelopmentCard());
-			stock.addResourceCards(cards);
+			card = stock.getDevelopmentCard();
 		} catch (NoMoreCardInStockException e) {
-			addResourceCardsToPlayer(player, cards);
+			return;
 		}
+		
+		HashMap<ResourceType, Integer> resources = new HashMap<ResourceType, Integer>();
+		resources.put(ResourceType.Getreide, 1);
+		resources.put(ResourceType.Wolle, 1);
+		resources.put(ResourceType.Erz, 1);
+		
+		receiveResourceCards(player, resources);
+		player.AddDevCard(card);
 	}
 	
 	

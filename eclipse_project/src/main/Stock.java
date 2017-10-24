@@ -2,6 +2,8 @@ package main;
 
 import java.util.ArrayList;
 
+import exceptions.NoMoreCardInStockException;
+
 public class Stock {
 	
 	private ArrayList<ResourceCard> wood;
