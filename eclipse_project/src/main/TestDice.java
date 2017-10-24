@@ -1,6 +1,6 @@
 package main;
 
-public class KaisTestKlasse {
+public class TestDice {
 
 		private static main.Dice Dice;
 	public static void main(String[] args) {
