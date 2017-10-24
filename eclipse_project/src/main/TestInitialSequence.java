@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class TestInitialSequence {
 
 	public static void main(String[] args) {
-		ArrayList<ResourceCard> rList = new ArrayList<ResourceCard>();
-		ArrayList<DevelopmentCard> dList = new ArrayList<DevelopmentCard>();
 		ArrayList<Earning> eList = new ArrayList<Earning>();
 		
 		Player player = new Player();
