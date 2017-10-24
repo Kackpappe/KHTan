@@ -39,11 +39,11 @@ public class Player {
 			Color = color;
 		}
 
-		public int getWinpooints() {
+		public int getWinpoints() {
 			return Winpooints;
 		}
 
-		public void setWinpooints(int winpooints) {
+		public void setWinpoints(int winpooints) {
 			Winpooints = winpooints;
 		}
 		public ResourceCard gatherResourceCard(ResourceType type) {

@@ -2,7 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
-public class TestPlayer {
+public class TestPlayerResourceCard {
 		private static main.Player player;
 		private static main.ResourceCard resCard;
 		private static main.ResourceCard returnCard;
