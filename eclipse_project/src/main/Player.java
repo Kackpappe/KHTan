@@ -27,6 +27,10 @@ public class Player {
 			return ResourceCardList;
 		}
 
+		public ArrayList<DevelopmentCard> getDevelopmentCards() {
+			return DevCardList;
+		}
+		
 		public void setName(String name) {
 			Name = name;
 		}
