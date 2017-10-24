@@ -62,4 +62,20 @@ public class Player {
 			
 			
 		}
+
+		public SpecialCardType getKnightlyPower() {
+			return KnightlyPower;
+		}
+
+		public void setKnightlyPower(SpecialCardType knightlyPower) {
+			KnightlyPower = knightlyPower;
+		}
+
+		public SpecialCardType getTradingPower() {
+			return TradingPower;
+		}
+
+		public void setTradingPower(SpecialCardType tradingPower) {
+			TradingPower = tradingPower;
+		}
 }
