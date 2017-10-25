@@ -172,113 +172,33 @@ public class InitialSequence {
 	
 	private void createResCards() {
 		// Holz
-		ResourceCard rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Holz);
-		rList.add(rCard);
-		// Getreide
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Getreide);
-		rList.add(rCard);
-		// Lehm
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Lehm);
-		rList.add(rCard);
-		// Erz
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Erz);
-		rList.add(rCard);
-		// Wolle
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
-		rCard = new ResourceCard(ResourceType.Wolle);
-		rList.add(rCard);
+		ResourceCard rCard;
 		
+		for(int ih = 0; ih < 30; ih++) {
+			rCard = new ResourceCard(ResourceType.Holz);
+			rList.add(rCard);	
+		}
+		
+		for(int ih = 0; ih < 30; ih++) {
+			rCard = new ResourceCard(ResourceType.Wolle);
+			rList.add(rCard);	
+		}
+		
+		for(int ih = 0; ih < 30; ih++) {
+			rCard = new ResourceCard(ResourceType.Getreide);
+			rList.add(rCard);	
+		}
+		
+		for(int ih = 0; ih < 30; ih++) {
+			rCard = new ResourceCard(ResourceType.Lehm);
+			rList.add(rCard);	
+		}
+		
+		for(int ih = 0; ih < 30; ih++) {
+			rCard = new ResourceCard(ResourceType.Erz);
+			rList.add(rCard);	
+		}
+			
 	}
 	
 }

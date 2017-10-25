@@ -8,10 +8,10 @@ public class Game {
 		private int CurrentPhase; // aktuelle Spielphase
 		private ArrayList<Player> playerList = new ArrayList<Player>();  //Liste der Spieler
 		
-		public static void main(ArrayList<Player> player) {
+		public void main(ArrayList<Player> player) {
 			//Spielfeld und Karten initialisieren
 			InitialSequence init = new InitialSequence();
-			Bank bank = init.main(null);
+			Bank bank = init.main(playerList);
 			
 			for(int i = 0; player.get(i).getWinpoints() < 10; i++) {
 				
