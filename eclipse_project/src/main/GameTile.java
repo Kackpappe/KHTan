@@ -2,7 +2,7 @@ package main;
 
 public class GameTile {
 	private main.GameTileType type;
-	private main.Color color;
+	private Player player;
 	private int winpoints;
 	
 	
@@ -12,11 +12,11 @@ public class GameTile {
 	public void setWinpoints(int winpoints) {
 		this.winpoints = winpoints;
 	}
-	public main.Color getColor() {
-		return color;
+	public Player getPlayer() {
+		return player;
 	}
-	public void setColor(main.Color color) {
-		this.color = color;
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 	public main.GameTileType getType() {
 		return type;

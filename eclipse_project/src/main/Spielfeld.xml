@@ -1,0 +1,122 @@
+<field>
+	<hex id="0" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="" />
+			<neighbor number="2" id="1" />
+			<neighbor number="3" id="3" />
+			<neighbor number="4" id="2" />
+			<neighbor number="5" id="" />
+			<neighbor number="6" id="" />
+		</neighbors>
+	</hex>
+	<hex id="1" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="" />
+			<neighbor number="2" id="" />
+			<neighbor number="3" id="4" />
+			<neighbor number="4" id="3" />
+			<neighbor number="5" id="0" />
+			<neighbor number="6" id="" />
+		</neighbors>
+	</hex>
+	<hex id="2" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="0" />
+			<neighbor number="2" id="3" />
+			<neighbor number="3" id="6" />
+			<neighbor number="4" id="5" />
+			<neighbor number="5" id="" />
+			<neighbor number="6" id="" />
+		</neighbors>
+	</hex>
+	<hex id="3" type="4" number="4">
+		<neighbors>
+			<neighbor number="1" id="1" />
+			<neighbor number="2" id="4" />
+			<neighbor number="3" id="7" />
+			<neighbor number="4" id="6" />
+			<neighbor number="5" id="2" />
+			<neighbor number="6" id="0" />
+		</neighbors>
+	</hex>
+	<hex id="4" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="" />
+			<neighbor number="2" id="" />
+			<neighbor number="3" id="8" />
+			<neighbor number="4" id="7" />
+			<neighbor number="5" id="3" />
+			<neighbor number="6" id="1" />
+		</neighbors>
+	</hex>
+	<hex id="5" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="2" />
+			<neighbor number="2" id="6" />
+			<neighbor number="3" id="9" />
+			<neighbor number="4" id="" />
+			<neighbor number="5" id="" />
+			<neighbor number="6" id="" />
+		</neighbors>
+	</hex>
+	<hex id="6" type="2" number="2">
+		<neighbors>
+			<neighbor number="1" id="3" />
+			<neighbor number="2" id="7" />
+			<neighbor number="3" id="10" />
+			<neighbor number="4" id="9" />
+			<neighbor number="5" id="5" />
+			<neighbor number="6" id="2" />
+		</neighbors>
+	</hex>
+	<hex id="7" type="3" number="5">
+		<neighbors>
+			<neighbor number="1" id="4" />
+			<neighbor number="2" id="8" />
+			<neighbor number="3" id="11" />
+			<neighbor number="4" id="10" />
+			<neighbor number="5" id="6" />
+			<neighbor number="6" id="3" />
+		</neighbors>
+	</hex>
+	<hex id="8" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="" />
+			<neighbor number="2" id="" />
+			<neighbor number="3" id="" />
+			<neighbor number="4" id="11" />
+			<neighbor number="5" id="7" />
+			<neighbor number="6" id="4" />
+		</neighbors>
+	</hex>
+	<hex id="9" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="6" />
+			<neighbor number="2" id="10" />
+			<neighbor number="3" id="" />
+			<neighbor number="4" id="" />
+			<neighbor number="5" id="" />
+			<neighbor number="6" id="5" />
+		</neighbors>
+	</hex>
+	<hex id="10" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="7" />
+			<neighbor number="2" id="11" />
+			<neighbor number="3" id="" />
+			<neighbor number="4" id="" />
+			<neighbor number="5" id="9" />
+			<neighbor number="6" id="6" />
+		</neighbors>
+	</hex>
+	<hex id="11" type="0" number="0">
+		<neighbors>
+			<neighbor number="1" id="8" />
+			<neighbor number="2" id="" />
+			<neighbor number="3" id="" />
+			<neighbor number="4" id="" />
+			<neighbor number="5" id="10" />
+			<neighbor number="6" id="7" />
+		</neighbors>
+	</hex>
+</field>
