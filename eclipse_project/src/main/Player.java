@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Player {
 		private String Name;
-		private main.Color Color;
+		private Color Color;
 		private int Winpooints;
 		private ArrayList<ResourceCard> ResourceCardList = new ArrayList<ResourceCard>();
 		private ArrayList<DevelopmentCard> DevCardList = new ArrayList<DevelopmentCard>();
+		private ArrayList<GameTile> GameTileList = new ArrayList<GameTile>();
 		private SpecialCardType KnightlyPower;
 		private SpecialCardType TradingPower;
-		//private main.   Bustatus
+		//private main.   Baustatus
 
 		public void AddResourceCard(ResourceCard card) {
 			ResourceCardList.add(card);
@@ -81,5 +82,13 @@ public class Player {
 
 		public void setTradingPower(SpecialCardType tradingPower) {
 			TradingPower = tradingPower;
+		}
+
+		public ArrayList<GameTile> getGameTileList() {
+			return GameTileList;
+		}
+
+		public void setGameTileList(ArrayList<GameTile> gameTileList) {
+			GameTileList = gameTileList;
 		}
 }

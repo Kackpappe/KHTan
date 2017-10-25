@@ -8,7 +8,7 @@ public class InitialSequence {
 	private ArrayList<DevelopmentCard> dList = new ArrayList<DevelopmentCard>();
 	private ArrayList<SpecialCard> sList = new ArrayList<SpecialCard>();
 	
-	public Bank main(String[] args) {
+	public Bank main(ArrayList<Player> player) {
 		// Instanziieren der Karten
 		createResCards();  // Ressourcenkarten
 		createDevCards();  // Entwicklungskarten
@@ -19,16 +19,58 @@ public class InitialSequence {
 		Bank bank = new Bank();
 		bank.fillStock(rList,dList,sList);
 		
+		// Häfen initialisieren
+		ArrayList<Harbour> harbours = new ArrayList<Harbour>();
+		InitHarbour inith = new InitHarbour();
+		harbours = inith.InitHarbour();
+		
+		//TODO Häfen an Spielfeld übertragen
+		
 		// TODO Verteilen der Rohstoffkarten
 				
 		// TODO Verteilen der Spielsteine
-		createGameTiles();	
+		createGameTiles(player);	
 		// TODO Zum Schluss der Startsequenz Instanz löschen
 		return bank;
 	}
 	
-	private void createGameTiles() {
+	private void createGameTiles(ArrayList<Player> player) {
 		// TODO Auto-generated method stub
+		
+		GameTile gTile;
+		//gTile.setType(GameTileType.Raeuber);
+		//gameTiles.add(gTile);
+		
+		for(int i = 0; i < player.size(); i++) {
+			ArrayList<GameTile> gameTiles = new ArrayList<GameTile>();
+			for(int is = 0; is < 5; is++) {
+				gTile = new GameTile();
+				gTile.setType(GameTileType.Siedlung);
+				gTile.setWinpoints(1);
+				gTile.setColor(player.get(i).getColor());
+				gameTiles.add(gTile);
+			}
+			
+			for(int is = 0; is < 4; is++) {
+				gTile = new GameTile();
+				gTile.setType(GameTileType.Stadt);
+				gTile.setWinpoints(2);
+				gTile.setColor(player.get(i).getColor());
+				gameTiles.add(gTile);
+			}
+			
+			for(int is = 0; is < 15; is++) {
+				gTile = new GameTile();
+				gTile.setType(GameTileType.Strasse);
+				gTile.setWinpoints(0);
+				gTile.setColor(player.get(i).getColor());
+				gameTiles.add(gTile);
+				
+
+			}
+			player.get(i).setGameTileList(gameTiles);
+			
+		}
 		
 	}
 

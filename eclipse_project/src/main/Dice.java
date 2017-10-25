@@ -23,7 +23,7 @@ public class Dice {
 		    rolled_dice2 = zufallszahl;
 		}
 		
-		public main.Dice roll() {
+		public Dice roll() {
 			roll_dice1();
 			roll_dice2();
 			this.rolled_dice_total = this.rolled_dice1 + this.rolled_dice2;

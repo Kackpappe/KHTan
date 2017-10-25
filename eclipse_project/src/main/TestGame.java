@@ -45,9 +45,6 @@ public class TestGame {
 			
 			player.setName("Testspieler");
 			player.setColor(Color.Rot);
-			
-			
-			
-			
+						
 		}
 }
