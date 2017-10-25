@@ -47,7 +47,6 @@ public class InitialSequence {
 				gTile = new GameTile();
 				gTile.setType(GameTileType.Siedlung);
 				gTile.setWinpoints(1);
-				gTile.setColor(player.get(i).getColor());
 				gameTiles.add(gTile);
 			}
 			
@@ -55,7 +54,6 @@ public class InitialSequence {
 				gTile = new GameTile();
 				gTile.setType(GameTileType.Stadt);
 				gTile.setWinpoints(2);
-				gTile.setColor(player.get(i).getColor());
 				gameTiles.add(gTile);
 			}
 			
@@ -63,7 +61,6 @@ public class InitialSequence {
 				gTile = new GameTile();
 				gTile.setType(GameTileType.Strasse);
 				gTile.setWinpoints(0);
-				gTile.setColor(player.get(i).getColor());
 				gameTiles.add(gTile);
 				
 
