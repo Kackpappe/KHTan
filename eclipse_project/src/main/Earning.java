@@ -19,8 +19,10 @@ public class Earning {
 		if (resCount != null) {
 			resCount = resCount + count;
 		} else {
-			resources.put(type, count);
+			resCount = new Integer(count);
 		}
+		
+		resources.put(type, resCount);
 	}
 	
 	public Player getPlayer() {
