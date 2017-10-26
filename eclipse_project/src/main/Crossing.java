@@ -1,16 +1,16 @@
 package main;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Crossing {
 	
 	private int id;
 	private GameTile gameTile;
-	private ArrayList<Hexagon> hexagons;
+	private HashMap<Integer, Hexagon> hexagons;
 	
 	public Crossing(int id) {
 		this.id = id;
-		hexagons = new ArrayList<Hexagon>();
+		hexagons = new HashMap<Integer, Hexagon>();
 	}
 	
 	
@@ -27,7 +27,7 @@ public class Crossing {
 	}
 
 
-	public ArrayList<Hexagon> getHexagons() {
+	public HashMap<Integer, Hexagon> getHexagons() {
 		return hexagons;
 	}
 	
