@@ -10,38 +10,23 @@ public class Hexagon {
 	private boolean blocked;
 	private HashMap<HexagonNeighbor, Hexagon> neighbors;
 	private HashMap<HexagonCorners, Crossing> crossings;
-	private HashMap<HexagonEdges, GameTile> edges;
-	private EarningsCalculator calculator;
-	private InitCrossing initCrossing;
+	private HashMap<HexagonNeighbor, Path> paths;
+	private EarningsCalculator earningsCalc;
+	private InitHexagon initHex;
 	
 	public Hexagon(int id, HexagonType type, int numberChip) {
 		this.id = id;
 		this.type = type;
 		this.numberChip = numberChip;
 		
-		calculator = new EarningsCalculator(this);
-		initCrossing = new InitCrossing(this);
+		neighbors = new HashMap<HexagonNeighbor, Hexagon>();
+		crossings = new HashMap<HexagonCorners, Crossing>();
+		paths = new HashMap<HexagonNeighbor, Path>();
 		
-		init();
-	}
-	
-	
-	public void placeCorner(HexagonCorners corner, GameTile gameTile) {
-		Crossing crossing = crossings.get(corner);
-		crossing.setGameTile(gameTile);
-		crossings.put(corner, crossing);
-	}
-	
-	
-	public void removeCorner(HexagonCorners corner) {
-		Crossing crossing = crossings.get(corner);
-		crossing.setGameTile(null);
-		crossings.put(corner, crossing);
-	}
-	
-	
-	public void placeEdge(HexagonEdges edge, GameTile gameTile) {
-		edges.put(edge, gameTile);
+		earningsCalc = new EarningsCalculator(this);
+		
+		initHex = new InitHexagon(this);
+		initHex.initializeHexagon();
 	}
 	
 	
@@ -78,39 +63,18 @@ public class Hexagon {
 	}
 
 
-	public HashMap<HexagonEdges, GameTile> getEdges() {
-		return edges;
+	public HashMap<HexagonNeighbor, Path> getPaths() {
+		return paths;
 	}
 
 
-	public EarningsCalculator getCalculator() {
-		return calculator;
+	public EarningsCalculator getEarningsCalc() {
+		return earningsCalc;
 	}
-
-
-	public InitCrossing getInitCrossing() {
-		return initCrossing;
-	}
-
-
-	private void init() {
-		neighbors = new HashMap<HexagonNeighbor, Hexagon>();
-		neighbors.put(HexagonNeighbor.neighbor1, null);
-		neighbors.put(HexagonNeighbor.neighbor2, null);
-		neighbors.put(HexagonNeighbor.neighbor3, null);
-		neighbors.put(HexagonNeighbor.neighbor4, null);
-		neighbors.put(HexagonNeighbor.neighbor5, null);
-		neighbors.put(HexagonNeighbor.neighbor6, null);
-		
-		crossings = new HashMap<HexagonCorners, Crossing>();
-		
-		edges = new HashMap<HexagonEdges, GameTile>();
-		edges.put(HexagonEdges.edge1, null);
-		edges.put(HexagonEdges.edge2, null);
-		edges.put(HexagonEdges.edge3, null);
-		edges.put(HexagonEdges.edge4, null);
-		edges.put(HexagonEdges.edge5, null);
-		edges.put(HexagonEdges.edge6, null);
+	
+	
+	public InitHexagon getInitHex() {
+		return initHex;
 	}
 	
 }

@@ -22,16 +22,15 @@ public class InitField {
 	}
 	
 	
-	public void initialIzeFierld() {
-		field.getHexagons().clear();
-		field.getCrossings().clear();
-		
+	public void initializeFierld() {
 		initHexagons();
 		initCrossings();
+		initPaths();
 	}
 	
 	
 	private void initHexagons() {
+		field.getHexagons().clear();
 		Document doc = null;
 		
 		try {
@@ -65,11 +64,24 @@ public class InitField {
 	
 	
 	private void initCrossings() {
+		field.getCrossings().clear();
+		
 		for (int i : field.getHexagons().keySet()) {
-			field.getHexagons().get(i).getInitCrossing().initializeCrossings();
+			field.getHexagons().get(i).getInitHex().getInitCrossing().initializeCrossings();
 		}
 		
 		field.getCrossings().putAll(CrossingProvider.getInstance().getAllCrossings());
+	}
+	
+	
+	private void initPaths() {
+		field.getPaths().clear();
+		
+		for (int i : field.getHexagons().keySet()) {
+			field.getHexagons().get(i).getInitHex().getInitPath().initializePaths();
+		}
+		
+		field.getPaths().putAll(PathProvider.getInstance().getAllPaths());
 	}
 	
 	
